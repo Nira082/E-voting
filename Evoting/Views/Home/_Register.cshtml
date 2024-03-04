@@ -1,0 +1,23 @@
+﻿@model Register
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<form class="Register" asp-controller="home" asp-action="register" method="post">
+    <div class="field">
+        <input type="text" asp-for="Username" placeholder="Username" required>
+    </div>
+    <div class="field">
+        <input type="text" asp-for="DisplayName" placeholder="Displayname" required>
+    </div>
+    <div class="field">
+        <input type="password" asp-for="Password" placeholder="Password" required>
+    </div>
+    <div class="field">
+        <input type="password" asp-for="ConfirmPassword" placeholder="Confirm password" required>
+        @Html.ValidationMessageFor(x => x.ConfirmPassword)
+    </div>
+    <div class="field btn">
+        <div class="btn-layer"></div>
+        <input type="submit" value="Register">
+    </div>
+</form>

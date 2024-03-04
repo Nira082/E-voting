@@ -1,0 +1,28 @@
+﻿@model Login
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <strong style="color:red">@TempData["ErrorMessage"]</strong>
+}
+
+<form asp-action="login" asp-controller="home" class="login" method="post">
+    <div class="field">
+        <input type="text" asp-for="Username" placeholder="Username" required>
+    </div>
+    <div class="field">
+        <input type="password" asp-for="Password" placeholder="Password" required>
+    </div>
+    <div class="pass-link">
+        <a href="#">Forgot password?</a>
+    </div>
+    <div class="field btn">
+        <div class="btn-layer"></div>
+        <input type="submit" value="Login">
+    </div>
+    <div class="Register-link">
+        Not a member? <a href="">Register now</a>
+    </div>
+</form>

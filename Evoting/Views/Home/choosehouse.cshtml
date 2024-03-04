@@ -1,0 +1,120 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your House</title>
+    <style>
+        body {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: -1px;
+            padding-bottom: 1px;
+            font-size: 70px;
+            font-family: "montserrat";
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000000;
+            background: none;
+            padding: 10px 20px;
+            font-size: 40px;
+            font-family: "montserrat";
+            cursor: pointer;
+            margin: 20px;
+            border-radius: 25px;
+        }
+
+        .red {
+            background-color: #d90707;
+            color: white;
+        }
+
+        .blue {
+            background-color: #0451c4;
+            color: white;
+        }
+
+        .yellow {
+            background-color: #dbcd02;
+            color: white;
+        }
+
+        .green {
+            background-color: #06ba18;
+            color: white;
+        }
+
+        .red:hover {
+            background-color: #f23535;
+            border-color: #f23535;
+        }
+
+        .blue:hover {
+            background-color: #2f5beb;
+            border-color: #2f5beb;
+        }
+
+        .yellow:hover {
+            background-color: #e5e827;
+            border-color: #e5e827;
+        }
+
+        .green:hover {
+            background-color: #38eb4a;
+            border-color: #38eb4a;
+        }
+
+
+
+        .house-button:hover {
+            color: #ddd;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <h1>Choose Your House</h1>
+
+    <div class="button-container">
+        <a href="@Url.Action("prefect","Redhouse")" class="btn red" id="red-house">Red House</a>
+        <a href="@Url.Action("prefect","Bluehouse")" class="btn blue" id="blue-house">Blue House</a>
+    </div>
+
+    <div class="button-container">
+        <a href="@Url.Action("prefect","Yellowhouse")" class="btn yellow" id="yellow-house">Yellow House</a>
+        <a href="@Url.Action("prefect","Greenhouse")" class="btn green" id="green-house">Green House</a>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
